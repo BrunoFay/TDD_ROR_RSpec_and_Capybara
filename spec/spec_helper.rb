@@ -15,6 +15,18 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require_relative './helpers/composition'
 RSpec.configure do |config|
+# config  config.before(:suite) do
+#     puts "before all suite tests"
+#     end
+#   config.after(:suite) do
+#     puts "after all suite tests"
+#     end
+#   config.after(:context) do
+#     puts "after all context tests"
+#   end
+#   config.after(:all) do
+#     puts "after all tests"
+#   end
   config.include Helper
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
