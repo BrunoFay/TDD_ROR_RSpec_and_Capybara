@@ -15,6 +15,10 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require_relative './helpers/composition'
 RSpec.configure do |config|
+  #way to agregate all tests in app
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true
+  end
 # config  config.before(:suite) do
 #     puts "before all suite tests"
 #     end
