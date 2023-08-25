@@ -8,4 +8,10 @@ describe 'Test double ' do
     allow(person).to receive(:name).and_return('plj diego')
     allow(person).to receive(:age).and_return(12)
   end
+  it 'as null obj' do
+    animal = double(:lizard).as_null_object
+    allow(animal).to receive(:type).and_return('reptile')
+    allow(animal).to receive(:is_dangerous?).and_return(true)
+    animal.can_fly? # this method will break the test if as_null_object wasn't set
+  end
 end
